@@ -1,3 +1,4 @@
+import CompanyLogo from "./components/CompanyLogo"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 
@@ -8,6 +9,7 @@ function App() {
       <div className="overflow-hidden">
         <Header />
         <Hero />
+        <CompanyLogo />
       </div>
     </main>
   )
