@@ -1,4 +1,5 @@
 import CompanyLogo from "./components/CompanyLogo"
+import FeaturesSec from "./components/FeaturesSec"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import PurposeSec from "./components/PurposeSec"
@@ -12,6 +13,7 @@ function App() {
         <Hero />
         <CompanyLogo />
         <PurposeSec />
+        <FeaturesSec />
       </div>
     </main>
   )

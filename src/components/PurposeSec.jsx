@@ -1,19 +1,19 @@
+const features = [
+  {
+    icon: "🟣", 
+    title: "Built for impact",
+    description: "We identify and nurture a truly diverse team of designers, developers and marketers"
+  },
+  {
+    icon: "🔴", 
+    title: "In sync with you",
+    description: "We work the way you do by adapting to your workflows and rhythm we aim to blend in for a seamless."
+  }
+]
+
 const PurposeSec = () => {
-  const features = [
-    {
-      icon: "🟣", 
-      title: "Built for impact",
-      description: "We identify and nurture a truly diverse team of designers, developers and marketers"
-    },
-    {
-      icon: "🔴", 
-      title: "In sync with you",
-      description: "We work the way you do by adapting to your workflows and rhythm we aim to blend in for a seamless."
-    }
-  ]
-  
   return (
-    <section className="w-full bg-gray-50 py-16 px-4 sm:px-6 md:px-8">
+    <section id="about" className="w-full bg-gray-50 py-16 px-4 sm:px-6 md:px-8">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
 
         {/* Heading text */}

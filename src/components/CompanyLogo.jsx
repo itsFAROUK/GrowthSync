@@ -4,9 +4,9 @@ import woocommerce from "../assets/woocommerce.png"
 import meundies from "../assets/meundies.png"
 import sitepoint from "../assets/sitepoint.png"
 
+const logos = [slack, amazon, woocommerce, meundies, sitepoint]
+
 const CompanyLogo = () => {
-  const logos = [slack, amazon, woocommerce, meundies, sitepoint]
-  
   return (
     <div className="w-full overflow-hidden container mx-auto py-20 flex flex-col gap-8 sm:flex-row sm:items-center">
       
