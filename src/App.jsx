@@ -1,6 +1,7 @@
 import CompanyLogo from "./components/CompanyLogo"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
+import PurposeSec from "./components/PurposeSec"
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Header />
         <Hero />
         <CompanyLogo />
+        <PurposeSec />
       </div>
     </main>
   )
