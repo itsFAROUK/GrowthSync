@@ -6,6 +6,7 @@ import MonitorSec from "./components/MonitorSec"
 import PurposeSec from "./components/PurposeSec"
 import PricingSec from "./components/PricingSec"
 import ScheduleSec from "./components/ScheduleSec"
+import ServicesSec from "./components/ServicesSec"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <ScheduleSec />
         <MonitorSec />
         <PricingSec />
+        <ServicesSec />
       </div>
     </main>
   )
