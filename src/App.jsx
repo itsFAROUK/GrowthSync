@@ -3,6 +3,7 @@ import FeaturesSec from "./components/FeaturesSec"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import PurposeSec from "./components/PurposeSec"
+import ScheduleSec from "./components/ScheduleSec"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <CompanyLogo />
         <PurposeSec />
         <FeaturesSec />
+        <ScheduleSec />
       </div>
     </main>
   )
