@@ -4,6 +4,7 @@ import Header from "./components/Header"
 import Hero from "./components/Hero"
 import MonitorSec from "./components/MonitorSec"
 import PurposeSec from "./components/PurposeSec"
+import PricingSec from "./components/PricingSec"
 import ScheduleSec from "./components/ScheduleSec"
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <FeaturesSec />
         <ScheduleSec />
         <MonitorSec />
+        <PricingSec />
       </div>
     </main>
   )
