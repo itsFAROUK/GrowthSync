@@ -50,7 +50,7 @@ const testimonials = [
 
 const TestimonialsSec = () => {
   return (
-    <section className="py-16 px-4 max-w-7xl mx-auto">
+    <section id="testimonials" className="py-16 px-4 max-w-7xl mx-auto">
 
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold md:text-4xl mb-4">What our happy client say</h2>
@@ -95,10 +95,10 @@ const TestimonialsSec = () => {
                     <img src={testimonial.image} alt="user" className="w-full h-full object-cover rounded-full"/>
                   </div>
 
-                  <div className="flex justify-center">
-                    {[...Array(5).fill(
-                      <span>★</span>
-                    )]}
+                  <div className="flex justify-center mb-3">
+                    {[...Array(5)].map((_, index) => (
+                      <span key={index} className="text-blue-600">★</span>
+                    ))}
                   </div>
 
                   <h3 className="text-xl font-semibold mb-3">{testimonial.name}</h3>
@@ -113,9 +113,9 @@ const TestimonialsSec = () => {
 
         {/* Navigational bttons */}
         <div className='flex justify-center gap-4 mt-4 md:mt-8'>
-          <buton className="swiper-button-prev-custom w-12 h-12 rounded-full border border-gray-200 grid place-content-center hover:bg-blue-500 hover:text-white transition-colors cursor-pointer">
+          <button className="swiper-button-prev-custom w-12 h-12 rounded-full border border-gray-200 grid place-content-center hover:bg-blue-500 hover:text-white transition-colors cursor-pointer">
             <BsChevronLeft/>
-          </buton>
+          </button>
           <button className="swiper-button-next-custom w-12 h-12 rounded-full border border-gray-200 grid place-content-center hover:bg-blue-500 hover:text-white transition-colors cursor-pointer">
             <BsChevronRight />
           </button>

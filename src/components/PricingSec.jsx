@@ -1,4 +1,7 @@
-import { useState } from "react"
+import { motion } from "framer-motion";
+import { fadeIn, textVariant } from "../utils/motion";
+
+import { useState } from 'react';
 
 const PricingSec = () => {
   const [productCount, setProductCount] = useState(1)
@@ -8,30 +11,56 @@ const PricingSec = () => {
   const businessPrice = Math.round(7500 * (productCount / 50))
   
   return (
-    <section className="py-20 px-4">
+    <motion.section 
+      variants={fadeIn('up', 0.2)}
+      initial="hidden"
+      whileInView="show"
+      className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
 
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Pricing</h2>
+        <motion.h2 
+          variants={textVariant(0.3)}
+          className="text-3xl md:text-4xl font-bold text-center mb-16">Pricing</motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <motion.div 
+          variants={fadeIn('up', 0.4)}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {/* Starter plan */}
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h3 className="text-xl text-gray-600 mb-4">Starter</h3>
-            <p className="text-3xl font-bold mb-6">${starterPrice}/mo</p>
-          </div>
+          <motion.div 
+            variants={fadeIn('right', 0.5)}
+            className="bg-white p-8 rounded-lg shadow-lg">
+            <motion.h3 
+              variants={fadeIn('up', 0.6)}
+              className="text-xl text-gray-600 mb-4">Starter</motion.h3>
+            <motion.p 
+              variants={fadeIn('up', 0.7)}
+              className="text-3xl font-bold mb-6">${starterPrice}/mo</motion.p>
+          </motion.div>
 
           {/* Business plan */}
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h3 className="text-xl text-gray-600 mb-4">Business</h3>
-            <p className="text-3xl font-bold mb-6">${businessPrice}/mo</p>
-          </div>
-        </div>
+          <motion.div 
+            variants={fadeIn('left', 0.5)}
+            className="bg-white p-8 rounded-lg shadow-lg">
+            <motion.h3 
+              variants={fadeIn('up', 0.6)}
+              className="text-xl text-gray-600 mb-4">Business</motion.h3>
+            <motion.p 
+              variants={fadeIn('up', 0.7)}
+              className="text-3xl font-bold mb-6">${businessPrice}/mo</motion.p>
+          </motion.div>
+        </motion.div>
 
-        <div className="max-w-xl mx-auto">
+        <motion.div 
+          variants={fadeIn('up', 0.8)}
+          className="max-w-xl mx-auto">
 
-          <p className="text-center text-gray-600 mb-4">{productCount} products</p>
+          <motion.p 
+            variants={fadeIn('up', 0.9)}
+            className="text-center text-gray-600 mb-4">{productCount} products</motion.p>
 
-          <div className="flex items-center gap-2 px-4">
+          <motion.div 
+            variants={fadeIn('up', 1.0)}
+            className="flex items-center gap-2 px-4">
             <span className="text-xs sm:text-sm text-gray-600">1</span>
 
               <input 
@@ -45,17 +74,25 @@ const PricingSec = () => {
                 className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"/>
 
               <span className="text-xs sm:text-sm text-gray-600">50</span>
-          </div>
+          </motion.div>
 
-          <div className="text-center mt-12">
-            <p className="text-xl text-gray-600 mb-4">Ready to get started?</p>
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors cursor-pointer">Get Started</button>
-          </div>
+          <motion.div 
+            variants={fadeIn('up', 1.1)}
+            className="text-center mt-12">
+            <motion.p 
+              variants={fadeIn('up', 1.2)}
+              className="text-xl text-gray-600 mb-4">Ready to get started?</motion.p>
+            <motion.button 
+              variants={fadeIn('up', 1.3)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors cursor-pointer">Get Started</motion.button>
+          </motion.div>
           
-        </div>
+        </motion.div>
 
       </div>
-    </section>
+    </motion.section>
   )
 }
 

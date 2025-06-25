@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { fadeIn, textVariant } from "../utils/motion";
+
 import { FaFacebookF, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 const footerLinks = {
@@ -26,14 +29,24 @@ const footerLinks = {
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-50">
+    <motion.footer 
+      variants={fadeIn('up', 0.2)}
+      initial="hidden"
+      whileInView="show"
+      className="bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 pb-8">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
+        <motion.div 
+          variants={fadeIn('up', 0.3)}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Brand column */}
-          <div className="lg:col-span-4">
+          <motion.div 
+            variants={fadeIn('right', 0.4)}
+            className="lg:col-span-4">
 
-            <div className="flex items-center gap-1 mb-4">
+            <motion.div 
+              variants={fadeIn('down', 0.5)}
+              className="flex items-center gap-1 mb-4">
 
               {/* Logo */}
               <div className="flex items-center gap-1 cursor-pointer" aria-label="Logo">
@@ -43,56 +56,87 @@ const Footer = () => {
 
               <p className="text-xl font-medium ml-1">The Next Design</p>
               
-            </div>
+            </motion.div>
 
-            <p className="text-gray-600 mb-6 md:w-3/4">
+            <motion.p 
+              variants={fadeIn('up', 0.6)}
+              className="text-gray-600 mb-6 md:w-3/4">
               The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times.
-            </p>
+            </motion.p>
 
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white">
+            <motion.div 
+              variants={fadeIn('up', 0.7)}
+              className="flex gap-4">
+              <motion.a 
+                whileHover={{ scale: 1.1 }}
+                href="#" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white">
                 <FaFacebookF className="size-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-400 hover:text-white">
+              </motion.a>
+              <motion.a 
+                whileHover={{ scale: 1.1 }}
+                href="#" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-400 hover:text-white">
                 <FaTwitter className="size-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-700 hover:text-white">
+              </motion.a>
+              <motion.a 
+                whileHover={{ scale: 1.1 }}
+                href="#" className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-700 hover:text-white">
                 <FaLinkedin className="size-5" />
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
             
-          </div>
+          </motion.div>
 
           {/* Footer Nav items */}
-          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <motion.div 
+            variants={fadeIn('left', 0.4)}
+            className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
             {
               Object.entries(footerLinks).map(([category, linkes], index) => (
-                <div key={index}>
-                  <h3 className="text-lg font-medium mb-4 uppercase">{category}</h3>
-                  <ul className="space-y-3">
+                <motion.div 
+                  key={index}
+                  variants={fadeIn('up', 0.3 * (index+ 1))}>
+                  <motion.h3 
+                    variants={textVariant(0.2)}
+                    className="text-lg font-medium mb-4 uppercase">{category}</motion.h3>
+                  <motion.ul 
+                    variants={fadeIn('up', 0.4)}
+                    className="space-y-3">
                     {
                       linkes.map((link, index) => (
-                        <li key={index}>
-                          <a href="#" className="text-gray-600 hover:text-gray-900">{link.name}</a>
-                        </li>
+                        <motion.li 
+                          key={index}
+                          variants={fadeIn('up', 0.1 * (index + 1))}
+                        >
+                          <motion.a 
+                          whileHover={{ x: 5 }}
+                          href="#" className="text-gray-600 hover:text-gray-900">{link.name}</motion.a>
+                        </motion.li>
                       ))
                     }
-                  </ul>
-                </div>
+                  </motion.ul>
+                </motion.div>
               ))
             }
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Footer bottom section */}
-        <div className="border-t border-gray-200 text-gray-600 text-sm mt-12 pt-8 flex flex-col md:flex-row items-center justify-between">
-          <p>Copyright © {new Date().getFullYear()} codetutorbd.com</p>
-          <p>Created by Farouk Bouaziz</p>
-        </div>
+        <motion.div 
+          variants={fadeIn('up', 0.8)}
+          className="border-t border-gray-200 text-gray-600 text-sm mt-12 pt-8 flex flex-col md:flex-row items-center justify-between">
+          <motion.p 
+            variants={fadeIn('right', 1.0)}>
+                Copyright © {new Date().getFullYear()} codetutorbd.com
+          </motion.p>
+          <motion.p 
+            variants={fadeIn('left', 1.0)}
+            >Created by Farouk Bouaziz
+          </motion.p>
+        </motion.div>
       
         
       </div>
-    </footer>
+    </motion.footer>
   )
 }
 

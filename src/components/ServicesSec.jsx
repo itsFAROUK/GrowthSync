@@ -33,7 +33,7 @@ const services = [
 
 const ServicesSec = () => {
   return (
-    <section className="py-20 container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-24">
+    <section id="services" className="py-20 container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-24">
 
       {/* Header */}
       <div className="w-full md:w-1/2 text-center md:text-left">
