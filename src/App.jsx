@@ -9,6 +9,7 @@ import PricingSec from "./components/PricingSec"
 import ScheduleSec from "./components/ScheduleSec"
 import ServicesSec from "./components/ServicesSec"
 import TestimonialsSec from "./components/TestimonialsSec"
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <ServicesSec />
         <TestimonialsSec />
         <NewsletterSec />
+        <Footer />
       </div>
     </main>
   )
