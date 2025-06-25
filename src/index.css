@@ -17,3 +17,15 @@ html {
     transform: translateX(-50%);
   }
 }
+
+.swiper-button-next-custom.swiper-button-disabled,
+.swiper-button-prev-custom.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.swiper-button-next-custom.swiper-button-disabled:hover,
+.swiper-button-prev-custom.swiper-button-disabled:hover {
+  background-color: unset;
+  color: unset;
+}

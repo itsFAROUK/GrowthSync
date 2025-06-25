@@ -74,7 +74,7 @@ const testimonials = [
     {
       id: 2,
       name: "John De marli",
-      image: "https://randomuser.me/api/portraits/women/90.jpg", 
+      image: "https://randomuser.me/api/portraits/men/67.jpg", 
       text: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.",
     },
     {
@@ -85,8 +85,8 @@ const testimonials = [
     },
     {
       id: 4,
-      name: "Sarah Johnson",
-      image: "https://randomuser.me/api/portraits/women/45.jpg",
+      name: "Steve  Johnson",
+      image: "https://randomuser.me/api/portraits/men/21.jpg",
       text: "The customer service has been exceptional. They went above and beyond to help me solve my problems and were always available when I needed them.",
     },
     {
@@ -97,8 +97,8 @@ const testimonials = [
     },
     {
       id: 6,
-      name: "Emma Wilson",
-      image: "https://randomuser.me/api/portraits/women/28.jpg",
+      name: "Karl Willson",
+      image: "https://randomuser.me/api/portraits/men/34.jpg",
       text: "What impressed me most was how quickly they responded to my requests. The team is professional, knowledgeable, and truly cares about their customers' success.",
     },
   
